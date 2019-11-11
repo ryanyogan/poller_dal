@@ -18,4 +18,11 @@ defmodule PollerDal.Choices.Choice do
     |> validate_required([:description, :votes, :party, :question_id])
     |> assoc_constraint(:question)
   end
+
+  def parties do
+    [
+      {"Democrat", 0},
+      {"Republican", 1}
+    ]
+  end
 end
