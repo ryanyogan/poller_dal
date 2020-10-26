@@ -21,7 +21,8 @@ defmodule PollerDal.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.5.1"},
-      {:postgrex, "~> 0.15.7"}
+      {:postgrex, "~> 0.15.7"},
+      {:argon2_elixir, "~> 2.3.0"}
     ]
   end
 end
