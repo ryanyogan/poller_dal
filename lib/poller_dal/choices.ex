@@ -2,7 +2,6 @@ defmodule PollerDal.Choices do
   import Ecto.Query
   alias PollerDal.Repo
   alias PollerDal.Choices.Choice
-  # list_choices_by_choices_id/1
 
   def list_choices(), do: Repo.all(Choice)
 
@@ -44,4 +43,8 @@ defmodule PollerDal.Choices do
     )
     |> Repo.all()
   end
+
+  defdelegate parties, to: Choice
+  defdelegate party_ids, to: Choice
+  defdelegate party_description(id), to: Choice
 end

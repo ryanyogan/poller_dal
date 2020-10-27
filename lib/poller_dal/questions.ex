@@ -17,6 +17,10 @@ defmodule PollerDal.Questions do
     |> Repo.insert()
   end
 
+  def change_question(%Question{} = question) do
+    Question.changeset(question, %{})
+  end
+
   def update_question(%Question{} = question, attrs) do
     question
     |> Question.changeset(attrs)
