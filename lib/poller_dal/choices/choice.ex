@@ -17,6 +17,8 @@ defmodule PollerDal.Choices.Choice do
     field(:party, :integer)
 
     belongs_to(:question, Question)
+
+    timestamps()
   end
 
   def changeset(choice, attrs) do
